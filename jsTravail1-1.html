@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript exercise</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    
+    <h1>La Calculatrice</h1>
+    
+    <p>
+      Pige un nombre...
+      <br>
+      <input id="addition" name="opperations" type="radio" value="1" checked/>
+      <label for="addition">1: addition(+)</label>
+      <br>
+      <input id="soustraction" name="opperations" type="radio" value="2"/>
+      <label for="soustraction">2: soustraction(-)</label>
+      <br>
+      <input id="multiplication" name="opperations" type="radio" value="3"/>
+      <label for="multiplication">3: multiplication(x)</label>
+      <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript exercise</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    
+    <h1>La Calculatrice</h1>
+    
+    <p>
+      Pige un nombre...
+      <br>
+      <input id="addition" name="opperations" type="radio" value="1" checked/>
+      <label for="addition">1: addition(+)</label>
+      <br>
+      <input id="soustraction" name="opperations" type="radio" value="2"/>
+      <label for="soustraction">2: soustraction(-)</label>
+      <br>
+      <input id="multiplication" name="opperations" type="radio" value="3"/>
+      <label for="multiplication">3: multiplication(x)</label>
+      <br>
+      <input id="division" name="opperations" type="radio" value="4"/>
+      <label for="division">4: division(/)</label>
+      <br>
+      <input id="reste" name="opperations" type="radio" value="5"/>
+      <label for="reste">5: reste d'un division</label>
+      
+      <br><br>
+      <label for="numb1">Numero 1:</label>
+      <input type="text" id="numb1"/>
+      <br>
+      <label for="numb2">Numero 2:</label>
+      <input type="text" id="num2"/>
+      
+      <br><br>
+      <input type="button" id="btnFini" onclick="calcule()"  value="Recevoir ta resultat">
+      
+      <br><br>
+    </p>
+    
+    
+    <div id="divAffiche">
+      
+    </div>
+    
+    <script>
+      
+function calcule() {
+      // demande de donneés
+  var opperations = document.getElementsByName("opperations");
+  var num1 = document.getElementById("numb1").value;
+  var num2 = document.getElementById("numb2").value;
+  var affiche = document.getElementById("divAffiche").value;
+
+  var opp = "";
+  for (var i = 0; i < opperations.length; i++) {
+    if (opperations[i].checked) {
+      opp = radiosAnnee[i].value;
+    }
+  }
+
+      // les oppérations 
+  switch (opp) {
+   case 1:
+     var rep = (num1 + num2);
+     break;
+
+    case 2:
+     var rep = (num1 - num2);
+     break;
+
+    case 3:
+      var rep = (num1 * num2);
+      break;
+
+    case 4:
+     var rep = (num1 / num2);
+      break;
+
+    default:
+     var rep = (num1 % num2);
+  }
+
+  var message = "<br><br>La reponse est: " + rep
+  affiche.innerHTML = message
+}
+      
+    </script>
+  </body>
+</html>
