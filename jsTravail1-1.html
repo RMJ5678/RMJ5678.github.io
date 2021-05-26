@@ -14,16 +14,16 @@
       Pige un nombre...
       <br>
       <input id="addition" name="opperations" type="radio" value="1" checked/>
-      <label for="addition">1: addition(+)</label>
+      <label for="addition">1: addition (+)</label>
       <br>
       <input id="soustraction" name="opperations" type="radio" value="2"/>
-      <label for="soustraction">2: soustraction(-)</label>
+      <label for="soustraction">2: soustraction (-)</label>
       <br>
       <input id="multiplication" name="opperations" type="radio" value="3"/>
-      <label for="multiplication">3: multiplication(x)</label>
+      <label for="multiplication">3: multiplication (x)</label>
       <br>
       <input id="division" name="opperations" type="radio" value="4"/>
-      <label for="division">4: division(/)</label>
+      <label for="division">4: division (/)</label>
       <br>
       <input id="reste" name="opperations" type="radio" value="5"/>
       <label for="reste">5: reste d'un division</label>
@@ -33,7 +33,7 @@
       <input type="text" id="numb1"/>
       <br>
       <label for="numb2">Numero 2:</label>
-      <input type="text" id="num2"/>
+      <input type="text" id="numb2"/>
       
       <br><br>
       <input type="button" id="btnFini" onclick="calcule()"  value="Recevoir ta resultat">
@@ -58,7 +58,7 @@ function calcule() {
   var opp = "";
   for (var i = 0; i < opperations.length; i++) {
     if (opperations[i].checked) {
-      opp = radiosAnnee[i].value;
+      opp = opperations[i].value;
     }
   }
 
@@ -85,7 +85,7 @@ function calcule() {
   }
 
   var message = "<br><br>La reponse est: " + rep
-  affiche.innerHTML = message
+  affiche = message
 }
       
     </script>
