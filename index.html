@@ -29,7 +29,28 @@
 
     <p>
       <ul>
-        <li> <a href="jsTrvail1-1.html">La Calculatrice (methode 1)</a>
+        <li> <a href="jsTravail1-1.html">La Calculatrice (methode 1)</a>
+        <li> <a href="magasin.js">Magasinage (methode 2)</a>
+        <li> <a onclick="
+var rep = confirm('Tu vas magasiner?');
+var prix = '';
+var sousTotal = 0
+let i = 1
+const VNC = 1.13
+
+while (rep) {
+  prix = parseFloat(prompt('C est quoi le prix de ton item? ( _.__$ '));
+  console.log('Item ' + i + ': ' + prix.toFixed(2) + '$');
+  i++
+
+  sousTotal = sousTotal + prix
+
+  total = sousTotal * VNC
+
+  rep = confirm('Est-ce que tu veux continuer?');
+}
+
+            alert('SOUS-TOTAL: ' + sousTotal.toFixed(2) + '$' + '\nTOTAL: ' + total.toFixed(2) + '$')">Magasinage 2 (methode 3)</a>
       </ul>
     </p>
      
