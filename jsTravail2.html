@@ -28,14 +28,16 @@
       <br>
       <input type="button" id="affUtilisateur" onclick="formulaireUtilisateur()" value="Ton Nom d'utilisateur"/>
 
+      <br><br>
+
       <div id="divAffiche"></div>
 
       <script>
 
         function formulaireInitiales() {
-          var pNom = document.getElementById("prenom");
-          var mNon = document.getElementById("nommilieu");
-          var dNom = document.getElementById("derniernom");
+          var pNom = document.getElementById("prenom").value;
+          var mNom = document.getElementById("nommilieu").value;
+          var dNom = document.getElementById("derniernom").value;
           var affiche = document.getElementById("divAffiche");
 
           let initiales = pNom[0].toUpperCase() + "." + mNom[0].toUpperCase() + "." + dNom[0].toUpperCase() + "."
@@ -44,9 +46,9 @@
         }
 
         function formulaireComplet() {
-          var pNom = document.getElementById("prenom");
-          var mNon = document.getElementById("nommilieu");
-          var dNom = document.getElementById("derniernom");
+          var pNom = document.getElementById("prenom").value;
+          var mNom = document.getElementById("nommilieu").value;
+          var dNom = document.getElementById("derniernom").value;
           var affiche = document.getElementById("divAffiche");
 
           let complet = pNom + " " +  mNom + " " + dNom
@@ -55,9 +57,9 @@
         }
 
         function formulaireUtilisateur() {
-          var pNom = document.getElementById("prenom");
-          var mNon = document.getElementById("nommilieu");
-          var dNom = document.getElementById("derniernom");
+          var pNom = document.getElementById("prenom").value;
+          var mNom = document.getElementById("nommilieu").value;
+          var dNom = document.getElementById("derniernom").value;
           var affiche = document.getElementById("divAffiche");
 
           let utilisateur = pNom[0].toLowerCase() + mNom[0].toLowerCase() + dNom.toLowerCase();
