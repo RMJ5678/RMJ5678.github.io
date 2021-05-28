@@ -8,7 +8,35 @@
   <body>
     
     <h1>Magasinage</h1>
+
+    <form>
+
+      <p>
+
+        Vous allez au magasin pour acheter un item... 
+
+        <br><br>
+
+        <label for="priceOfItem">Prix de l'item: </label>
+        <input type="text" id="priceOfItem" value="_.__ "/>
+        <br>
+        <label for="quantity">Quantite: </label>
+        <input type="text" id="quantity"/>
+
+        <br><br>
+
+        <input type="button" id="affBtn" onclick="calcule()" value="---Tes prix---"/>
+
+      </p>
+
+      <div id="affiche1"></div>
+      <div id="affiche2"></div>
+      <div id="affiche3"></div>
+      <div id="affiche4"></div>
+
+      <script src="magasinage.js"></script>
+
+    </form>
     
-    <script src="magasinage.js"></script>
   </body>
 </html>
