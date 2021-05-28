@@ -28,9 +28,7 @@
       <br>
       <input type="button" id="affUtilisateur" onclick="formulaireUtilisateur()" value="Ton Nom d'utilisateur"/>
 
-      <div id="divAffiche">
-
-      </div>
+      <div id="divAffiche"></div>
 
       <script>
 
@@ -42,7 +40,7 @@
 
           let initiales = pNom[0].toUpperCase() + "." + mNom[0].toUpperCase() + "." + dNom[0].toUpperCase() + "."
 
-          affiche = initiales
+          affiche.innerHTML = initiales
         }
 
         function formulaireComplet() {
@@ -53,7 +51,7 @@
 
           let complet = pNom + " " +  mNom + " " + dNom
 
-          affiche = complet
+          affiche.innerHTML = complet
         }
 
         function formulaireUtilisateur() {
@@ -64,7 +62,7 @@
 
           let utilisateur = pNom[0].toLowerCase() + mNom[0].toLowerCase() + dNom.toLowerCase();
 
-          affiche = utilisateur
+          affiche.innerHTML = utilisateur
         }
       
       </script>
