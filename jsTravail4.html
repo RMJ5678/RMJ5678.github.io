@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>madlibs javascript</title>
+  </head>
+
+  <body>
+    
+    <h1>MadLibs!</h1>
+
+    <form>
+
+      <h3>Insere les mots approprier dans les cases ci-dessous</h3>
+
+      <label for="mot1">Vetements - nom pluriel: </label>
+      <input type="text" id="mot1"/>
+      <br>
+      <label for="mot2">Nourriture, avec determinant: </label>
+      <input type="text" id="mot2"/>
+      <br>
+      <label for="mot3">Action - verbe a l'infinitif: </label>
+      <input type="text" id="mot3"/>
+      <br>
+      <label for="mot4">Nom d'ami: </label>
+      <input type="text" id="mot4"/>
+      <br>
+      <label for="mot5">Nourriture - au pluriel: </label>
+      <input type="text" id="mot5"/>
+      <br>
+      <label for="mot6">Adjectif: </label>
+      <input type="text" id="mot6"/>
+      <br>
+      <label for="mot7">Action - verbe a l'infinitif: </label>
+      <input type="text" id="mot7"/>
+      <br>
+      <label for="mot8">Adverbe qui termine en -ment: </label>
+      <input type="text" id="mot8"/>
+      <br>
+      <label for="mot9">Nourriture: </label>
+      <input type="text" id="mot9"/>
+      <br>
+      <label for="mot10">Nom: </label>
+      <input type="text" id="mot10"/>
+      <br>
+      <label for="mot11">Adjectif: </label>
+      <input type="text" id="mot11"/>
+
+      <br><br>
+
+      <input type="button" id="finished" onclick="afficheMadLibs()" value="Affiche MadLibs">
+
+      <br><br>
+
+      <div id="divAffiche"></div>
+
+      <script>
+
+        function afficheMadLibs() {
+          var mot1 = document.getElementById("mot1").value;
+          var mot2 = document.getElementById("mot2").value;
+          var mot3 = document.getElementById("mot3").value;
+          var mot4 = document.getElementById("mot4").value;
+          var mot5 = document.getElementById("mot5").value;
+          var mot6 = document.getElementById("mot6").value;
+          var mot7 = document.getElementById("mot7").value;
+          var mot8 = document.getElementById("mot8").value;
+          var mot9 = document.getElementById("mot9").value;
+          var mot10 = document.getElementById("mot10").value;
+          var mot11 = document.getElementById("mot11").value;
+          var affiche = document.getElementById("divAffiche");
+
+          let message = "J'adore l'été! Chaque jour, quand je suis en vacances, je me réveille, je mets mes " + mot1 + ", je me rend à la cuisine et je mange " + mot2 + " pour déjeuner.  Ensuite, mon activité préféré est de " + mot3 + " avec mon ami " + mot4 + ". À 14h, je dîne.  Je mange des " + mot5 + " " + mot6 + ".  Durant l’après-midi, j’aime me rendre au parc et de " + mot7 + " " + mot8 + ".  En soirée, je mange toujours du " + mot9 + " pour le souper.  Finalement, je me couche et je rêve de " + mot10 + ".  Quel été " + mot11 + "!"
+
+          affiche.innerHTML = message
+        }
+
+      </script>
+
+    </form>
+    
+  </body>
+</html>
