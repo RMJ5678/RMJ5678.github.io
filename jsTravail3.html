@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>quiz javascript</title>
+  </head>
+
+  <body>
+    
+    <h1>Pop Quiz!</h1>
+
+    <form>
+
+      <h4>1. Quels sont les 2 boucles principaux?</h4>
+
+      <label for="rep1">#1: </label>
+      <input type="text" id="rep1"/>
+      <br>
+      <label for="rep2">#2: </label>
+      <input type="text" id="rep2"/>
+
+      <br><br>
+
+      <h4>2. Quel language est le plus populaire?</h4>
+
+      <input type="radio" name="languagePopu" value="Python"/>  Python
+      <br>
+      <input type="radio" name="languagePopu" value="Javascript"/>  Javascript
+      <br>
+      <input type="radio" name="languagePopu" value="HTML"/>  HTML
+      <br>
+      <input type="radio" name="languagePopu" value="Java"/>  Java
+      <br>
+      <input type="radio" name="languagePopu" value="SQL"/>  SQL
+
+      <br><br>
+
+      <h4>3. De les reponses en-dessous, lesquels sont des peripheriques?</h4>
+
+      <input type="checkbox" name="chkbox" value="Imprimante, "/>  Imprimante
+      <br>
+      <input type="checkbox" name="chkbox" value="Memoire vive, "/>  Memoire vive
+      <br>
+      <input type="checkbox" name="chkbox" value="Carte mere, "/>  Carte mere
+      <br>
+      <input type="checkbox" name="chkbox" value="Clavier, "/>  Clavier
+      <br>
+      <input type="checkbox" name="chkbox" value="Ecouteur, "/>  Ecouteur
+      <br>
+      <input type="checkbox" name="chkbox" value="Disque dur, "/>  Disque dur
+      <br>
+      <input type="checkbox" name="chkbox"value="Cle USB"/>  Cle USB
+
+      <br><br>
+
+      <input type="button" id="affBtn" onclick="affiche()" value="Soumet le quiz et recevoir le corrige"/>
+
+      <br><br><br>
+
+      <div id="qst1"></div>
+      <div id="affSom1"></div>
+      <div id="affRep1"></div>
+      <br>
+      <div id="qst2"></div>
+      <div id="affSom2"></div>
+      <div id="affRep2"></div>
+      <br>
+      <div id="qst3"></div>
+      <div id="affSom3"></div>
+      <div id="affRep3"></div>
+
+      <script>
+
+        function affiche() {
+          var affiche1 = document.getElementById("qst1");
+          var affiche2 = document.getElementById("affSom1");
+          var affiche3 = document.getElementById("affRep1");
+
+          var rep1 = document.getElementById("rep1").value;
+          var rep2 = document.getElementById("rep2").value;
+
+          let qst1 = "----Question 1----"
+          let affSom1 = "Tes reponses: " + rep1 + " et " + rep2
+          let affRep1 = "Corrige: for et while"
+
+          affiche1.innerHTML = qst1
+          affiche2.innerHTML = affSom1
+          affiche3.innerHTML = affRep1
+
+          //-----------------------------------------------------
+
+          var affiche4 = document.getElementById("qst2");
+          var affiche5 = document.getElementById("affSom2");
+          var affiche6 = document.getElementById("affRep2");
+          var rep3 = document.getElementsByName("languagePopu");
+
+          var lanPop = ""
+          for (var i = 0; i < rep3.length; i++) {
+            if (rep3[i].checked) {
+              lanPop = rep3[i].value;
+            }
+          }
+
+          let qst2 = "----Question 2----"
+          let affSom2 = "Ta reponse: " + lanPop
+          let affRep2 = "Corrige: Javascript" 
+
+          affiche4.innerHTML = qst2
+          affiche5.innerHTML = affSom2
+          affiche6.innerHTML = affRep2
+
+          //-----------------------------------------------------
+
+          var affiche7 = document.getElementById("qst3");
+          var affiche8 = document.getElementById("affSom3");
+          var affiche9 = document.getElementById("affRep3");
+
+          var chkbox = document.getElementsByName("chkbox");
+          var rep4 = ""
+          for (var i=0; i < chkbox.length; i++) {
+            if (chkbox[i].checked) {
+              rep4 += " " + chkbox[i].value;
+            }
+          }
+
+          let qst3 = "----Question 3----"
+          let affSom3 = "Tes reponses: " + rep4
+          let affRep3 = "Corrige: Imprimante, Clavier, Ecouteur, Disque dur"
+
+          affiche7.innerHTML = qst3
+          affiche8.innerHTML = affSom3
+          affiche9.innerHTML = affRep3
+        }
+
+      </script>
+
+    </form>
+    
+  </body>
+</html>
