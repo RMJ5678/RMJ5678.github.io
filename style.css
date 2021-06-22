@@ -1,0 +1,38 @@
+.button {
+    border: 1px solid gray;
+    background-color: lightgray;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 0px;
+    transition: all 0.3s;
+    outline: none;
+    font-family: monospace;
+}
+
+.button:hover {
+    color: white;
+    background: black;
+}
+
+@keyframes bgcolor { /*Couleur d'arrière plan*/
+    0% { /*Commence par bleu et déscends jusqu'au blanc*/
+        background-color: lightblue
+    }
+
+    50% {
+        background-color: azure
+    }
+
+    100% { /*À la fin du cycle*/
+        background-color: white
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 10s infinite; /*Cycle complet*/
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate; /*Altèrne*/
+    animation-direction: alternate;
+    text-align: center; /*Aligne tout texte au centre*/
+}
