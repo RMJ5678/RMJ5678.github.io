@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Minesweeper.co</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <!-- Notre titre et notre nom de compagnie -->
+    <h1>Minesweeper.co</h1>
+    <br>
+
+
+    <!-- Une espace pour mettre le plateau du jeu ainsi que la bouton de recommencement et les mines -->
+    <form id="jeux" hidden>
+      <div id="bombAffiche"></div>
+      <br><div id="affiche"></div>
+      <br><input type="button" value="Recommencer?" onclick="hide();cleanArray()">
+    </form>
+
+    <!-- Ceci est la section des entrées pour la difficulté -->
+    <form id="difficulte">
+      <h4>Choisir une difficulté</h4>
+      <input type="button" id="dif1" value="Facile" onclick="hide(); generateUnsolvedArray();generateSolvedArray(1)">
+      <br><input type="button" id="dif2" value="Normal" onclick="hide();generateUnsolvedArray();generateSolvedArray(3)">
+      <br><input type="button" id="dif3" value="Difficile" onclick="hide();generateUnsolvedArray();generateSolvedArray(5)">
+    <form>
+    
+    <!-- Le lien qui va au fichier script qui a le code pour le jeu -->
+    <script src="script.js"></script>
+
+    <!-- Ceci est le lien à la page How To Play pour notre jeu -->
+    <h>
+      <br>
+      <br>Nouveau à Minesweeper?
+      <br>Clicker <a href="howToPlay.html">ici</a> pour apprendre comment jouer!
+    </h>
+    
+  </body>
+</html>
