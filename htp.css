@@ -1,0 +1,21 @@
+/*Couleur d'arrière plan*/
+@keyframes bgcolor {
+    0% { /*Commence par bleu et déscends jusqu'au blanc*/
+        background-color: lightblue
+    }
+
+    50% {
+        background-color: azure
+    }
+
+    100% { /*À la fin du cycle*/
+        background-color: white
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 10s infinite; /*Cycle complet*/
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate; /*Altèrne*/
+    animation-direction: alternate;
+}
